@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #fafafa;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2rem 1fr 1fr 1fr 2rem;
+    grid-gap: 1.5rem;
+    grid-template-areas: 
+    ". header header header ."
+    ".... hero hero ... ...."
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.5em;
+    /*grid-area: main;*/
+    grid-column: 2 / -2;
+}
+
+.header {
+    align-self: end;
+    display: flex;
+    justify-content: space-between;
+    grid-area: header;
+}
+
+.header-container {
+    align-self: end;
+    display: flex;
+    align-items: baseline;
+    padding: 1em 0 0;
+}
+
+.about-top {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+
+.about-top h1 {
+    font-size: 3rem;
+}
+
+
+.hero {
+    grid-area: hero;
+    align-self: end;
+    color: white;
+    margin-bottom: 4rem;
+}
+
+footer {
+    justify-self: center;
+    padding-bottom: 1.5em;
+    grid-column: 3 / 4;
+
+}
+
+/* TYPO */
+
+.header-par {
+    font-weight: 700;
+    margin: 0;
+    align-self: center;
+}
+
+#title {
+    align-self: flex-end;
+    margin-left: 0.3em;
+    margin-bottom: 0.5rem;
+}
+
+#about {
+    margin-left: 1.5em;
+}
+
+#home,
+#about {
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+}
+
+footer p {
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: center;
+    align-self: center;
+}
+
+footer a {
+    color: black;
+    font-weight: bold;
+}
+
+/* IMAGES */
+
+.logo {
+    width: 35px;
+    height: 35px;
+    align-self: flex-end;
+}
+
+.hero-img {
+    height: 100%;
+    width: 100%;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    object-fit: fill;
+}
+
+.article-img {
+    width: 100%;   
+}
+
+
+@media (max-width: 800px) {
+    .grid {
+        grid-template-columns: 0rem 1fr 0rem;
+        grid-template-areas: 
+        ". header ."
+        ". hero .";
+    }
+    main {
+        grid-template-columns: 1fr;
+        grid-column: 2 / 3;
+    }
+    .hero {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        object-fit: contain;
+    }
+    
+    #avatar {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    footer {
+        grid-column: 2 / 3;
+    }
+    .about-top {
+        display: block;
+    }
+    .about-top h1 {
+        font-size: 2rem;
+    }
+    #about {
+        margin-left: 0.75em;
+    }
+    #home,
+    #about {
+        margin-bottom: 0.5rem;
+    }
+}
