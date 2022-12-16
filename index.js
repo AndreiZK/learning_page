@@ -51,7 +51,7 @@ document.addEventListener('click', function(e) {
         grid.innerHTML += `
         <div id="about-section">
             <div class="about-top">
-                <img id='avatar' src='images/avatar.png'>
+                <img id='avatar' src='avatar.png'>
                 <div>
                     <h1>Hi there! My name is Roku and welcome to my learning journal.</h1>
                     <p>After several months of learning in the Frontend Developer Career Path,
