@@ -44,9 +44,12 @@ document.addEventListener('click', function(e) {
         }
         
         heroImg.style.display = 'none'
-        hero.style.gridColumn = '2 / -2'
-        hero.style.gridRow = '2 / 3'
+        
+        /* hero.style.gridColumn = '2 / -2'
+        hero.style.gridRow = '2 / 3' */
+        
         hero.style.display = 'none' 
+        
         //document.getElementById('hero-article-content').style.display = 'none'
         grid.innerHTML += `
         <div id="about-section">
